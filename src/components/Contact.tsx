@@ -44,7 +44,7 @@ export default function Contact() {
               <select
                 name="type"
                 required
-                className="w-full bg-black border border-border-line rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:border-accent-blue transition-colors"
+                className="w-full bg-card-bg border border-border-line rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:border-accent-blue transition-colors"
               >
                 <option value="">اختر نوع الطلب</option>
                 <option>مسح جيوفضائي</option>
@@ -64,7 +64,7 @@ export default function Contact() {
                 name="message"
                 rows={4}
                 required
-                className="w-full bg-black border border-border-line rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:border-accent-blue transition-colors resize-none"
+                className="w-full bg-card-bg border border-border-line rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:border-accent-blue transition-colors resize-none"
               />
             </div>
 
@@ -124,7 +124,7 @@ function Field({
         type={type}
         name={name}
         required={required}
-        className="w-full bg-black border border-border-line rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:border-accent-blue transition-colors"
+        className="w-full bg-card-bg border border-border-line rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:border-accent-blue transition-colors"
       />
     </div>
   );

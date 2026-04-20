@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
   { href: "#about", label: "من نحن" },
@@ -24,7 +25,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-black/80 backdrop-blur-xl border-b border-border-line"
+          ? "bg-background/80 backdrop-blur-xl border-b border-border-line"
           : "bg-transparent"
       }`}
       style={{ height: 52 }}
@@ -52,27 +53,30 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* CTA */}
-        <a
-          href="#contact"
-          className="hidden md:inline-flex btn-pill btn-primary"
-        >
-          ابدأ مشروعك
-        </a>
+        {/* CTA + Theme */}
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <a
+            href="#contact"
+            className="hidden md:inline-flex btn-pill btn-primary"
+          >
+            ابدأ مشروعك
+          </a>
 
-        {/* Mobile menu trigger */}
-        <button
-          aria-label="فتح القائمة"
-          className="md:hidden text-foreground"
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+          {/* Mobile menu trigger */}
+          <button
+            aria-label="فتح القائمة"
+            className="md:hidden text-foreground"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-border-line">
+        <div className="md:hidden bg-background/95 backdrop-blur-xl border-t border-border-line">
           <nav className="container-wide py-6 flex flex-col gap-4">
             {navLinks.map((l) => (
               <a
