@@ -54,10 +54,7 @@ export default function Projects() {
               {/* 📷 IMAGE_PLACEHOLDER: ضع صورة المشروع هنا (مثال: <img src="/images/project-zabadani.jpg" className="w-full h-64 object-cover" />) */}
               <div
                 className="h-56 w-full relative overflow-hidden"
-                style={{
-                  background:
-                    "linear-gradient(135deg, hsl(212 100% 12%) 0%, hsl(0 0% 6%) 100%)",
-                }}
+                style={{ background: "var(--gradient-card-feature)" }}
               >
                 <div className="absolute inset-0 flex items-center justify-center text-text-muted text-xs">
                   مكان الصورة

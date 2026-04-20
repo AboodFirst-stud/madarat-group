@@ -18,7 +18,7 @@ const reasons = [
 
 export default function WhyMadarat() {
   return (
-    <section className="py-[120px]" style={{ background: "hsl(0 0% 2%)" }}>
+    <section className="py-[120px] bg-section-alt">
       <div className="container-wide">
         <div className="text-center max-w-2xl mx-auto reveal">
           <span className="eyebrow">لماذا مدارات؟</span>
@@ -50,10 +50,7 @@ export default function WhyMadarat() {
               </div>
               <div
                 className="aspect-square rounded-2xl border border-border-line relative overflow-hidden"
-                style={{
-                  background:
-                    "radial-gradient(circle at 30% 30%, hsl(212 100% 14%) 0%, hsl(0 0% 4%) 70%)",
-                }}
+                style={{ background: "var(--gradient-card-feature)" }}
               >
                 {/* 📷 IMAGE_PLACEHOLDER: ضع صورة توضيحية لهذه الميزة هنا (مثال: <img src={`/images/why-${r.n}.jpg`} className="w-full h-full object-cover" />) */}
                 <div className="absolute inset-0 flex items-center justify-center text-text-muted text-sm">

@@ -1,11 +1,7 @@
 export default function Vision() {
   return (
     <section
-      className="relative py-[120px] overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(135deg, hsl(0 0% 2%) 0%, hsl(0 0% 4%) 50%, hsl(0 0% 2%) 100%)",
-      }}
+      className="relative py-[120px] overflow-hidden bg-section-alt"
     >
       {/* Diagonal subtle line */}
       <div

@@ -33,7 +33,7 @@ const steps = [
 
 export default function Methodology() {
   return (
-    <section className="py-[120px]" style={{ background: "hsl(0 0% 2%)" }}>
+    <section className="py-[120px] bg-section-alt">
       <div className="container-wide">
         <div className="text-center max-w-2xl mx-auto reveal">
           <span className="eyebrow">منهجيتنا</span>

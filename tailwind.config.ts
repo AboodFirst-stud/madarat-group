@@ -23,9 +23,12 @@ export default {
         foreground: "hsl(var(--foreground))",
         surface: "hsl(var(--surface))",
         "card-bg": "hsl(var(--card-bg))",
+        "section-alt": "hsl(var(--section-alt))",
         "border-line": "hsl(var(--border-line))",
         "text-secondary": "hsl(var(--text-secondary))",
         "text-muted": "hsl(var(--text-muted))",
+        "brand-teal": "hsl(var(--brand-teal))",
+        "brand-grey": "hsl(var(--brand-grey))",
         "accent-blue": {
           DEFAULT: "hsl(var(--accent-blue))",
           hover: "hsl(var(--accent-blue-hover))",

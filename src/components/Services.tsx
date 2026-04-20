@@ -59,8 +59,7 @@ export default function Services() {
           {services.map((s) => (
             <article
               key={s.title}
-              className="surface-card p-8 md:p-12 reveal"
-              style={{ background: "hsl(0 0% 5%)" }}
+              className="surface-card p-8 md:p-12 reveal bg-card-bg"
             >
               <div className="grid md:grid-cols-[1fr_1.4fr] gap-8 md:gap-12">
                 <header>
