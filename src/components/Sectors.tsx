@@ -32,8 +32,7 @@ export default function Sectors() {
           {sectors.map((s) => (
             <span
               key={s}
-              className="px-5 py-2.5 rounded-full border border-border-line text-sm text-foreground/90 hover:border-accent-blue hover:text-foreground transition-colors cursor-default"
-              style={{ background: "hsl(0 0% 5%)" }}
+              className="px-5 py-2.5 rounded-full border border-border-line text-sm text-foreground/90 hover:border-accent-blue hover:text-foreground transition-colors cursor-default bg-card-bg"
             >
               {s}
             </span>

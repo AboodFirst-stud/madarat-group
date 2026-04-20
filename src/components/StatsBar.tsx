@@ -34,8 +34,8 @@ function Stat({
 export default function StatsBar() {
   return (
     <section
-      className="border-y border-border-line"
-      style={{ background: "hsl(0 0% 4%)", padding: "48px 0" }}
+      className="border-y border-border-line bg-section-alt"
+      style={{ padding: "48px 0" }}
     >
       <div className="container-wide flex flex-wrap items-stretch divide-y md:divide-y-0 md:divide-x md:divide-x-reverse divide-border-line">
         <Stat value={400} prefix="+" suffix=" مليار$" label="تكلفة إعادة الإعمار المتوقعة في سوريا" />

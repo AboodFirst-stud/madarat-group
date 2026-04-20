@@ -23,8 +23,7 @@ export default function Investments() {
   return (
     <section
       id="investments"
-      className="py-[120px]"
-      style={{ background: "hsl(0 0% 2%)" }}
+      className="py-[120px] bg-section-alt"
     >
       <div className="container-wide">
         <div className="text-center max-w-2xl mx-auto reveal">

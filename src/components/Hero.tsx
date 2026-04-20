@@ -4,14 +4,14 @@ export default function Hero() {
       id="top"
       className="relative min-h-screen flex items-center justify-center overflow-hidden hero-mesh"
     >
-      ( <img src="/images/mdarat-photo-1.jpg" className="absolute inset-0 w-full h-full object-cover opacity-30 bg-black/50" />)
+      {/* 📷 IMAGE_PLACEHOLDER: ضع خلفية الهيرو هنا (مثال: <img src="/images/hero.jpg" className="absolute inset-0 w-full h-full object-cover opacity-20" />) */}
 
-      {/* توهج شعاعي خفيف */}
+      {/* توهج شعاعي خفيف بالألوان البراندية */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at center, hsl(212 100% 18% / 0.45) 0%, transparent 60%)",
+            "radial-gradient(ellipse at center, hsl(var(--hero-overlay) / var(--hero-overlay-alpha)) 0%, transparent 60%)",
         }}
       />
      
