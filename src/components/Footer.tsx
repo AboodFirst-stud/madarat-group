@@ -27,7 +27,7 @@ const cols = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border-line pt-16 pb-8" style={{ background: "hsl(0 0% 2%)" }}>
+    <footer className="border-t border-border-line pt-16 pb-8" style={{ background: "hsl(var(--footer-bg))" }}>
       <div className="container-wide">
         <div className="grid md:grid-cols-2 gap-10 pb-12 border-b border-border-line">
           <div>
