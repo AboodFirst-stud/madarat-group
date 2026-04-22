@@ -49,17 +49,17 @@ export default function Methodology() {
           {steps.map((s, i) => (
             <div
               key={s.n}
-              className={`grid md:grid-cols-[auto_1fr] gap-6 md:gap-12 items-start reveal ${
-                i % 2 ? "md:flex-row-reverse" : ""
+              className={`flex flex-col gap-6 md:gap-16 items-start reveal ${
+                i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               }`}
             >
               <div
-                className="text-7xl md:text-8xl font-bold leading-none select-none"
-                style={{ color: "hsl(var(--accent-blue) / 0.4)" }}
+                className="text-7xl md:text-8xl font-bold leading-none select-none shrink-0 w-24 text-center"
+                style={{ color: "hsl(var(--accent-blue))", opacity: 0.6 }}
               >
                 {s.n}
               </div>
-              <div>
+              <div className="flex-1">
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground">
                   {s.t}
                 </h3>
