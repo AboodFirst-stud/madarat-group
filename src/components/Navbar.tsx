@@ -13,9 +13,15 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 50);
+      const h = document.documentElement;
+      const total = h.scrollHeight - h.clientHeight;
+      setProgress(total > 0 ? (window.scrollY / total) * 100 : 0);
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -30,6 +36,14 @@ export default function Navbar() {
       }`}
       style={{ height: 52 }}
     >
+      {/* Scroll Progress Bar (N) */}
+      <div
+        className="absolute bottom-0 right-0 h-[2px] transition-[width] duration-150"
+        style={{
+          width: `${progress}%`,
+          background: "var(--gradient-progress)",
+        }}
+      />
       <div className="container-wide h-full flex items-center justify-between gap-6">
         {/* Logo (right in RTL) */}
         <a href="#top" className="flex flex-col leading-tight shrink-0">
