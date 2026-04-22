@@ -49,6 +49,19 @@ export default function Hero() {
           </a>
         </div>
       </div>
+
+      {/* Scroll indicator (K) */}
+      <a
+        href="#about"
+        aria-label="اكتشف المزيد"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce hover:opacity-80 transition-opacity"
+        style={{ color: "hsl(var(--accent-blue))" }}
+      >
+        <span className="text-xs">اكتشف المزيد</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </a>
     </section>
   );
 }

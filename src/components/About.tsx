@@ -36,6 +36,26 @@ export default function About() {
             >
               «ما يميّزنا ليس الحجم، بل عمق الفهم — ومخرجات يُوثق بها.»
             </p>
+
+            {/* Mini stats (O) */}
+            <div className="mt-8 grid grid-cols-3 gap-3">
+              {[
+                { n: "2,700", u: "هكتار", l: "أكبر مشروع مسح" },
+                { n: "42.6%", u: "ROI", l: "أعلى عائد محقق" },
+                { n: "+15", u: "دراسة", l: "جدوى منجزة" },
+              ].map((s) => (
+                <div key={s.n} className="surface-card p-4 text-center">
+                  <div className="text-xl font-bold text-foreground">{s.n}</div>
+                  <div
+                    className="text-xs font-medium mt-1"
+                    style={{ color: "hsl(var(--accent-blue))" }}
+                  >
+                    {s.u}
+                  </div>
+                  <div className="text-xs text-text-muted mt-1">{s.l}</div>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
