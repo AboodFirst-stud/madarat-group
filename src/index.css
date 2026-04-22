@@ -203,9 +203,13 @@
   }
 
   .hero-mesh {
-    background: var(--gradient-mesh);
-    background-size: 200% 200%;
-    animation: meshDrift 18s ease-in-out infinite;
+    background:
+      radial-gradient(ellipse at 30% 50%, hsl(var(--brand-deep) / 0.55) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 30%, hsl(var(--brand-teal) / 0.45) 0%, transparent 40%),
+      radial-gradient(ellipse at 90% 80%, hsl(var(--accent-red) / 0.30) 0%, transparent 30%),
+      hsl(var(--background));
+    background-size: 300% 300%;
+    animation: heroShift 18s ease-in-out infinite;
   }
 
   .reveal {
