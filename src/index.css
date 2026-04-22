@@ -9,41 +9,44 @@
 
 @layer base {
   :root {
-    /* ===== LIGHT THEME (default) — Madarat Brand Identity ===== */
-    /* Brand: Deep Green #0D5014, Vibrant Green #02A74A, Teal #009E8A, Grey #C8C7C7 */
-    --background: 60 9% 98%;            /* warm off-white */
-    --surface: 140 15% 95%;             /* very soft green-tinted grey */
-    --card-bg: 0 0% 100%;               /* pure white cards */
-    --section-alt: 140 20% 96%;         /* alternating section bg */
-    --border-line: 140 10% 85%;         /* soft green-grey border */
+    /* ===== LIGHT THEME — Madarat Brand 60-30-10 =====
+       60% Deep Green #0D5014  | 30% Teal #009E8A  | 10% Red #982532  */
+    --background: 120 33% 95%;          /* #f0f7f0 — أبيض مائل للأخضر */
+    --surface: 0 0% 100%;
+    --card-bg: 120 50% 98%;             /* #f8fdf8 */
+    --section-alt: 122 38% 91%;         /* #e8f5e9 */
+    --border-line: 122 38% 84%;         /* #c8e6c9 */
 
-    --foreground: 140 70% 12%;          /* deep brand green for text */
-    --text-secondary: 140 15% 35%;
-    --text-muted: 140 8% 50%;
+    --foreground: 122 27% 14%;          /* #1a2e1b — أخضر داكن جداً */
+    --text-secondary: 125 41% 30%;      /* #2d6a31 */
+    --text-muted: 125 22% 58%;          /* #7dab81 */
 
-    /* Brand accent = deep Madarat green */
-    --accent-blue: 137 72% 19%;         /* #0D5014 */
-    --accent-blue-hover: 145 97% 33%;   /* #02A74A */
-    --brand-teal: 174 98% 31%;          /* #009E8A */
+    /* Brand accents — secondary (30%) = teal, accent (10%) = red */
+    --accent-blue: 174 100% 31%;        /* #009E8A — Teal (secondary) */
+    --accent-blue-hover: 174 100% 25%;
+    --accent-red: 354 60% 37%;          /* #982532 — Red (CTA / accent) */
+    --accent-red-hover: 354 60% 30%;    /* #7d1f29 */
+    --brand-deep: 137 72% 19%;          /* #0D5014 — Primary 60% */
+    --brand-teal: 174 100% 31%;
     --brand-grey: 0 1% 78%;             /* #C8C7C7 */
 
-    /* Shadcn mappings */
-    --card: 0 0% 100%;
-    --card-foreground: 140 70% 12%;
+    /* Shadcn mappings — primary = deep green, accent = teal */
+    --card: 120 50% 98%;
+    --card-foreground: 122 27% 14%;
     --popover: 0 0% 100%;
-    --popover-foreground: 140 70% 12%;
-    --primary: 137 72% 19%;
+    --popover-foreground: 122 27% 14%;
+    --primary: 137 72% 19%;             /* deep green */
     --primary-foreground: 0 0% 100%;
-    --secondary: 140 15% 95%;
-    --secondary-foreground: 140 70% 12%;
-    --muted: 140 15% 95%;
-    --muted-foreground: 140 15% 35%;
-    --accent: 145 97% 33%;
+    --secondary: 122 38% 91%;
+    --secondary-foreground: 122 27% 14%;
+    --muted: 122 38% 91%;
+    --muted-foreground: 125 41% 30%;
+    --accent: 174 100% 31%;             /* teal */
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 72% 51%;
+    --destructive: 354 60% 37%;
     --destructive-foreground: 0 0% 100%;
-    --border: 140 10% 85%;
-    --input: 140 10% 85%;
+    --border: 122 38% 84%;
+    --input: 122 38% 84%;
     --ring: 137 72% 19%;
     --radius: 0.75rem;
 
@@ -57,9 +60,10 @@
     --sidebar-ring: 137 72% 19%;
 
     /* Gradients (light) — green-tinted */
-    --gradient-hero: radial-gradient(ellipse at center, hsl(145 60% 85% / 0.55) 0%, hsl(60 9% 98%) 70%);
-    --gradient-mesh: linear-gradient(135deg, hsl(60 9% 98%) 0%, hsl(145 40% 92%) 50%, hsl(60 9% 98%) 100%);
-    --gradient-card-feature: linear-gradient(135deg, hsl(145 50% 96%) 0%, hsl(174 40% 95%) 100%);
+    --gradient-hero: radial-gradient(ellipse at center, hsl(137 72% 19% / 0.15) 0%, hsl(120 33% 95%) 70%);
+    --gradient-mesh: linear-gradient(135deg, hsl(120 33% 95%) 0%, hsl(122 38% 88%) 50%, hsl(120 33% 95%) 100%);
+    --gradient-card-feature: linear-gradient(135deg, hsl(122 38% 91%) 0%, hsl(174 50% 92%) 100%);
+    --gradient-progress: linear-gradient(to left, hsl(354 60% 37%), hsl(174 100% 31%), hsl(137 72% 19%));
 
     /* Shadows */
     --shadow-card: 0 1px 0 0 hsl(137 72% 19% / 0.04) inset, 0 10px 30px -15px hsl(137 72% 19% / 0.18);
@@ -70,64 +74,70 @@
 
     /* Hero overlay tint (theme-aware) */
     --hero-overlay: 137 72% 25%;
-    --hero-overlay-alpha: 0.25;
-    --footer-bg: 140 20% 96%;
+    --hero-overlay-alpha: 0.18;
+    --footer-bg: 137 72% 19%;           /* #0D5014 — deep green footer in light */
+    --footer-foreground: 120 33% 95%;
   }
 
   .dark {
     /* ===== DARK THEME — Madarat Deep Green Night ===== */
-    --background: 140 30% 5%;           /* very deep green-black */
-    --surface: 140 25% 8%;
-    --card-bg: 140 22% 10%;
-    --section-alt: 140 28% 6%;
-    --border-line: 140 15% 18%;
+    --background: 125 53% 3%;           /* #030d04 — أخضر أسود عميق */
+    --surface: 130 45% 5%;              /* #061008 */
+    --card-bg: 122 43% 7%;              /* #0a1a0b */
+    --section-alt: 125 53% 4%;          /* #050f06 */
+    --border-line: 122 40% 17%;         /* #1a3d1c */
 
-    --foreground: 140 25% 95%;
-    --text-secondary: 140 8% 65%;
-    --text-muted: 140 6% 45%;
+    --foreground: 122 60% 93%;          /* #e8f5e9 */
+    --text-secondary: 122 38% 65%;      /* #81c784 */
+    --text-muted: 124 26% 39%;          /* #4a7c4e */
 
-    --accent-blue: 145 80% 45%;         /* brighter green for dark bg */
-    --accent-blue-hover: 145 90% 55%;
-    --brand-teal: 174 80% 45%;
+    --accent-blue: 174 100% 31%;        /* teal in dark too */
+    --accent-blue-hover: 174 100% 40%;
+    --accent-red: 354 60% 37%;          /* #982532 */
+    --accent-red-hover: 354 60% 45%;
+    --brand-deep: 137 72% 19%;
+    --brand-teal: 174 100% 31%;
     --brand-grey: 0 1% 78%;
 
-    --card: 140 22% 10%;
-    --card-foreground: 140 25% 95%;
-    --popover: 140 22% 10%;
-    --popover-foreground: 140 25% 95%;
-    --primary: 145 80% 45%;
-    --primary-foreground: 140 30% 5%;
-    --secondary: 140 22% 10%;
-    --secondary-foreground: 140 25% 95%;
-    --muted: 140 22% 10%;
-    --muted-foreground: 140 8% 65%;
-    --accent: 145 80% 45%;
-    --accent-foreground: 140 30% 5%;
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 140 25% 95%;
-    --border: 140 15% 18%;
-    --input: 140 15% 18%;
-    --ring: 145 80% 45%;
+    --card: 122 43% 7%;
+    --card-foreground: 122 60% 93%;
+    --popover: 122 43% 7%;
+    --popover-foreground: 122 60% 93%;
+    --primary: 174 100% 31%;            /* teal as primary in dark for contrast */
+    --primary-foreground: 125 53% 3%;
+    --secondary: 122 43% 7%;
+    --secondary-foreground: 122 60% 93%;
+    --muted: 122 43% 7%;
+    --muted-foreground: 122 38% 65%;
+    --accent: 174 100% 31%;
+    --accent-foreground: 125 53% 3%;
+    --destructive: 354 60% 45%;
+    --destructive-foreground: 122 60% 93%;
+    --border: 122 40% 17%;
+    --input: 122 40% 17%;
+    --ring: 174 100% 31%;
 
-    --sidebar-background: 140 30% 5%;
-    --sidebar-foreground: 140 25% 95%;
-    --sidebar-primary: 145 80% 45%;
-    --sidebar-primary-foreground: 140 30% 5%;
-    --sidebar-accent: 140 22% 10%;
-    --sidebar-accent-foreground: 140 25% 95%;
-    --sidebar-border: 140 15% 18%;
-    --sidebar-ring: 145 80% 45%;
+    --sidebar-background: 125 53% 3%;
+    --sidebar-foreground: 122 60% 93%;
+    --sidebar-primary: 174 100% 31%;
+    --sidebar-primary-foreground: 125 53% 3%;
+    --sidebar-accent: 122 43% 7%;
+    --sidebar-accent-foreground: 122 60% 93%;
+    --sidebar-border: 122 40% 17%;
+    --sidebar-ring: 174 100% 31%;
 
-    --gradient-hero: radial-gradient(ellipse at center, hsl(145 80% 20% / 0.5) 0%, hsl(140 30% 5%) 70%);
-    --gradient-mesh: linear-gradient(135deg, hsl(140 30% 5%) 0%, hsl(145 50% 10%) 50%, hsl(140 30% 5%) 100%);
-    --gradient-card-feature: linear-gradient(135deg, hsl(140 30% 8%) 0%, hsl(174 40% 10%) 100%);
+    --gradient-hero: radial-gradient(ellipse at center, hsl(137 72% 19% / 0.5) 0%, hsl(125 53% 3%) 70%);
+    --gradient-mesh: linear-gradient(135deg, hsl(125 53% 3%) 0%, hsl(137 60% 8%) 50%, hsl(125 53% 3%) 100%);
+    --gradient-card-feature: linear-gradient(135deg, hsl(122 43% 7%) 0%, hsl(174 50% 8%) 100%);
+    --gradient-progress: linear-gradient(to left, hsl(354 60% 45%), hsl(174 100% 40%), hsl(137 72% 25%));
 
-    --shadow-card: 0 1px 0 0 hsl(145 80% 50% / 0.05) inset, 0 20px 60px -20px hsl(140 50% 2% / 0.7);
+    --shadow-card: 0 1px 0 0 hsl(174 100% 40% / 0.05) inset, 0 20px 60px -20px hsl(125 53% 1% / 0.7);
     --shadow-glow: 0 0 80px -10px hsl(var(--accent-blue) / 0.5);
 
-    --hero-overlay: 145 80% 20%;
+    --hero-overlay: 137 72% 19%;
     --hero-overlay-alpha: 0.45;
-    --footer-bg: 140 30% 4%;
+    --footer-bg: 130 60% 2%;            /* #020b03 */
+    --footer-foreground: 122 60% 93%;
   }
 }
 
@@ -193,9 +203,13 @@
   }
 
   .hero-mesh {
-    background: var(--gradient-mesh);
-    background-size: 200% 200%;
-    animation: meshDrift 18s ease-in-out infinite;
+    background:
+      radial-gradient(ellipse at 30% 50%, hsl(var(--brand-deep) / 0.55) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 30%, hsl(var(--brand-teal) / 0.45) 0%, transparent 40%),
+      radial-gradient(ellipse at 90% 80%, hsl(var(--accent-red) / 0.30) 0%, transparent 30%),
+      hsl(var(--background));
+    background-size: 300% 300%;
+    animation: heroShift 18s ease-in-out infinite;
   }
 
   .reveal {
@@ -219,10 +233,17 @@
     transition-duration: 240ms;
   }
   .btn-primary {
-    background: hsl(var(--accent-blue));
+    background: hsl(var(--accent-red));
     color: white;
   }
   .btn-primary:hover {
+    background: hsl(var(--accent-red-hover));
+  }
+  .btn-secondary {
+    background: hsl(var(--accent-blue));
+    color: white;
+  }
+  .btn-secondary:hover {
     background: hsl(var(--accent-blue-hover));
   }
   .btn-ghost {
@@ -245,6 +266,11 @@
 }
 
 @keyframes meshDrift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes heroShift {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }

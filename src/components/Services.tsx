@@ -1,4 +1,30 @@
-const services = [
+import {
+  Plane,
+  Radar,
+  Map,
+  Box,
+  Activity,
+  BarChart2,
+  ClipboardList,
+  TrendingUp,
+  FileText,
+  Wrench,
+  Building2,
+  Network,
+  LucideIcon,
+} from "lucide-react";
+
+type ServiceItem = { t: string; d: string; icon: LucideIcon };
+type Service = {
+  eyebrow: string;
+  title: string;
+  en: string;
+  intro: string;
+  items: ServiceItem[];
+  star?: string;
+};
+
+const services: Service[] = [
   {
     eyebrow: "المحور الأول",
     title: "المسح الجيوفضائي",
@@ -6,11 +32,11 @@ const services = [
     intro:
       "نواة العمل في مدارات — بيانات جغرافية مكانية دقيقة، معتمدة وقابلة للتطوير، تُتيح اتخاذ قرارات إعمارية مدروسة.",
     items: [
-      { t: "المسح الجوي بالدرون", d: "دقة سنتيمترية ونماذج ثلاثية الأبعاد" },
-      { t: "مسح LiDAR الجوي", d: "نمذجة التضاريس تحت الغطاء النباتي، دقة ≤5 سم" },
-      { t: "الخرائط الطبوغرافية وتحليل GIS", d: "انحدارات، فيضانات، استخدامات الأراضي" },
-      { t: "التوثيق المعماري Scan to CAD/BIM", d: "مخططات 2D، BIM LOD 200-300، IFC" },
-      { t: "رصد التقدم وكشف التغيير", d: "تحديثات دورية، مقارنة زمنية، حساب الكميات" },
+      { t: "المسح الجوي بالدرون", d: "دقة سنتيمترية ونماذج ثلاثية الأبعاد", icon: Plane },
+      { t: "مسح LiDAR الجوي", d: "نمذجة التضاريس تحت الغطاء النباتي، دقة ≤5 سم", icon: Radar },
+      { t: "الخرائط الطبوغرافية وتحليل GIS", d: "انحدارات، فيضانات، استخدامات الأراضي", icon: Map },
+      { t: "التوثيق المعماري Scan to CAD/BIM", d: "مخططات 2D، BIM LOD 200-300، IFC", icon: Box },
+      { t: "رصد التقدم وكشف التغيير", d: "تحديثات دورية، مقارنة زمنية، حساب الكميات", icon: Activity },
     ],
     star: "جميع المخرجات معتمدة: تقرير QA + Release ID + شهادة دقة",
   },
@@ -18,25 +44,23 @@ const services = [
     eyebrow: "المحور الثاني",
     title: "دراسة وإدارة المشاريع",
     en: "Project Study & Management",
-    intro:
-      "قلب المجموعة — تُحوِّل الفرص الاستثمارية إلى خطط قابلة للتنفيذ.",
+    intro: "قلب المجموعة — تُحوِّل الفرص الاستثمارية إلى خطط قابلة للتنفيذ.",
     items: [
-      { t: "دراسات الجدوى الاقتصادية", d: "تحليل السوق، حساب ROI، تحليل المخاطر، معتمدة من البنوك والمموّلين" },
-      { t: "إدارة المشاريع والإشراف الميداني", d: "خرائط Gantt، متابعة يومية، تقارير دورية، ضبط الجودة" },
-      { t: "تطوير الأعمال والفرص الاستثمارية", d: "ملفات استثمارية، خطط عمل، نماذج مالية، مرافقة المستثمر" },
-      { t: "إدارة العقود والموردين", d: "إعداد العقود، التفاوض، متابعة التسليمات والمدفوعات" },
+      { t: "دراسات الجدوى الاقتصادية", d: "تحليل السوق، حساب ROI، تحليل المخاطر، معتمدة من البنوك والمموّلين", icon: BarChart2 },
+      { t: "إدارة المشاريع والإشراف الميداني", d: "خرائط Gantt، متابعة يومية، تقارير دورية، ضبط الجودة", icon: ClipboardList },
+      { t: "تطوير الأعمال والفرص الاستثمارية", d: "ملفات استثمارية، خطط عمل، نماذج مالية، مرافقة المستثمر", icon: TrendingUp },
+      { t: "إدارة العقود والموردين", d: "إعداد العقود، التفاوض، متابعة التسليمات والمدفوعات", icon: FileText },
     ],
   },
   {
     eyebrow: "المحور الثالث",
     title: "الإنشاء وإعادة الإعمار",
     en: "Construction & Reconstruction",
-    intro:
-      "تنفيذ ميداني مبني على بيانات حقيقية — من إعادة التأهيل إلى البناء الجديد.",
+    intro: "تنفيذ ميداني مبني على بيانات حقيقية — من إعادة التأهيل إلى البناء الجديد.",
     items: [
-      { t: "إعادة تأهيل المباني المتضررة", d: "تقييم هيكلي، خطة تأهيل، تنفيذ بفرق متخصصة، شهادة إنجاز + ضمان" },
-      { t: "بناء مجمعات سكنية وتجارية", d: "تصميم + BIM + هيكل خرساني + أنظمة المبنى + تسليم مفتاح باليد" },
-      { t: "مشاريع البنية التحتية", d: "طرق، شبكات مياه، كهرباء، جسور، صرف صحي — مع امتثال بيئي كامل" },
+      { t: "إعادة تأهيل المباني المتضررة", d: "تقييم هيكلي، خطة تأهيل، تنفيذ بفرق متخصصة، شهادة إنجاز + ضمان", icon: Wrench },
+      { t: "بناء مجمعات سكنية وتجارية", d: "تصميم + BIM + هيكل خرساني + أنظمة المبنى + تسليم مفتاح باليد", icon: Building2 },
+      { t: "مشاريع البنية التحتية", d: "طرق، شبكات مياه، كهرباء، جسور، صرف صحي — مع امتثال بيئي كامل", icon: Network },
     ],
   },
 ];
@@ -77,19 +101,31 @@ export default function Services() {
 
                 <div>
                   <ul className="grid sm:grid-cols-2 gap-3">
-                    {s.items.map((it) => (
-                      <li
-                        key={it.t}
-                        className="rounded-xl border border-border-line p-4 hover:border-accent-blue/40 transition-colors"
-                      >
-                        <div className="text-foreground font-semibold text-sm">
-                          {it.t}
-                        </div>
-                        <div className="text-text-secondary text-xs mt-1 leading-relaxed">
-                          {it.d}
-                        </div>
-                      </li>
-                    ))}
+                    {s.items.map((it) => {
+                      const Icon = it.icon;
+                      return (
+                        <li
+                          key={it.t}
+                          className="rounded-xl border border-border-line p-4 hover:border-accent-blue/40 transition-colors"
+                        >
+                          <div className="flex items-start gap-2">
+                            <Icon
+                              size={14}
+                              className="mt-1 shrink-0"
+                              style={{ color: "hsl(var(--accent-blue))" }}
+                            />
+                            <div>
+                              <div className="text-foreground font-semibold text-sm">
+                                {it.t}
+                              </div>
+                              <div className="text-text-secondary text-xs mt-1 leading-relaxed">
+                                {it.d}
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      );
+                    })}
                   </ul>
                   {s.star && (
                     <div
