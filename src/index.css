@@ -81,58 +81,63 @@
 
   .dark {
     /* ===== DARK THEME — Madarat Deep Green Night ===== */
-    --background: 140 30% 5%;           /* very deep green-black */
-    --surface: 140 25% 8%;
-    --card-bg: 140 22% 10%;
-    --section-alt: 140 28% 6%;
-    --border-line: 140 15% 18%;
+    --background: 125 53% 3%;           /* #030d04 — أخضر أسود عميق */
+    --surface: 130 45% 5%;              /* #061008 */
+    --card-bg: 122 43% 7%;              /* #0a1a0b */
+    --section-alt: 125 53% 4%;          /* #050f06 */
+    --border-line: 122 40% 17%;         /* #1a3d1c */
 
-    --foreground: 140 25% 95%;
-    --text-secondary: 140 8% 65%;
-    --text-muted: 140 6% 45%;
+    --foreground: 122 60% 93%;          /* #e8f5e9 */
+    --text-secondary: 122 38% 65%;      /* #81c784 */
+    --text-muted: 124 26% 39%;          /* #4a7c4e */
 
-    --accent-blue: 145 80% 45%;         /* brighter green for dark bg */
-    --accent-blue-hover: 145 90% 55%;
-    --brand-teal: 174 80% 45%;
+    --accent-blue: 174 100% 31%;        /* teal in dark too */
+    --accent-blue-hover: 174 100% 40%;
+    --accent-red: 354 60% 37%;          /* #982532 */
+    --accent-red-hover: 354 60% 45%;
+    --brand-deep: 137 72% 19%;
+    --brand-teal: 174 100% 31%;
     --brand-grey: 0 1% 78%;
 
-    --card: 140 22% 10%;
-    --card-foreground: 140 25% 95%;
-    --popover: 140 22% 10%;
-    --popover-foreground: 140 25% 95%;
-    --primary: 145 80% 45%;
-    --primary-foreground: 140 30% 5%;
-    --secondary: 140 22% 10%;
-    --secondary-foreground: 140 25% 95%;
-    --muted: 140 22% 10%;
-    --muted-foreground: 140 8% 65%;
-    --accent: 145 80% 45%;
-    --accent-foreground: 140 30% 5%;
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 140 25% 95%;
-    --border: 140 15% 18%;
-    --input: 140 15% 18%;
-    --ring: 145 80% 45%;
+    --card: 122 43% 7%;
+    --card-foreground: 122 60% 93%;
+    --popover: 122 43% 7%;
+    --popover-foreground: 122 60% 93%;
+    --primary: 174 100% 31%;            /* teal as primary in dark for contrast */
+    --primary-foreground: 125 53% 3%;
+    --secondary: 122 43% 7%;
+    --secondary-foreground: 122 60% 93%;
+    --muted: 122 43% 7%;
+    --muted-foreground: 122 38% 65%;
+    --accent: 174 100% 31%;
+    --accent-foreground: 125 53% 3%;
+    --destructive: 354 60% 45%;
+    --destructive-foreground: 122 60% 93%;
+    --border: 122 40% 17%;
+    --input: 122 40% 17%;
+    --ring: 174 100% 31%;
 
-    --sidebar-background: 140 30% 5%;
-    --sidebar-foreground: 140 25% 95%;
-    --sidebar-primary: 145 80% 45%;
-    --sidebar-primary-foreground: 140 30% 5%;
-    --sidebar-accent: 140 22% 10%;
-    --sidebar-accent-foreground: 140 25% 95%;
-    --sidebar-border: 140 15% 18%;
-    --sidebar-ring: 145 80% 45%;
+    --sidebar-background: 125 53% 3%;
+    --sidebar-foreground: 122 60% 93%;
+    --sidebar-primary: 174 100% 31%;
+    --sidebar-primary-foreground: 125 53% 3%;
+    --sidebar-accent: 122 43% 7%;
+    --sidebar-accent-foreground: 122 60% 93%;
+    --sidebar-border: 122 40% 17%;
+    --sidebar-ring: 174 100% 31%;
 
-    --gradient-hero: radial-gradient(ellipse at center, hsl(145 80% 20% / 0.5) 0%, hsl(140 30% 5%) 70%);
-    --gradient-mesh: linear-gradient(135deg, hsl(140 30% 5%) 0%, hsl(145 50% 10%) 50%, hsl(140 30% 5%) 100%);
-    --gradient-card-feature: linear-gradient(135deg, hsl(140 30% 8%) 0%, hsl(174 40% 10%) 100%);
+    --gradient-hero: radial-gradient(ellipse at center, hsl(137 72% 19% / 0.5) 0%, hsl(125 53% 3%) 70%);
+    --gradient-mesh: linear-gradient(135deg, hsl(125 53% 3%) 0%, hsl(137 60% 8%) 50%, hsl(125 53% 3%) 100%);
+    --gradient-card-feature: linear-gradient(135deg, hsl(122 43% 7%) 0%, hsl(174 50% 8%) 100%);
+    --gradient-progress: linear-gradient(to left, hsl(354 60% 45%), hsl(174 100% 40%), hsl(137 72% 25%));
 
-    --shadow-card: 0 1px 0 0 hsl(145 80% 50% / 0.05) inset, 0 20px 60px -20px hsl(140 50% 2% / 0.7);
+    --shadow-card: 0 1px 0 0 hsl(174 100% 40% / 0.05) inset, 0 20px 60px -20px hsl(125 53% 1% / 0.7);
     --shadow-glow: 0 0 80px -10px hsl(var(--accent-blue) / 0.5);
 
-    --hero-overlay: 145 80% 20%;
+    --hero-overlay: 137 72% 19%;
     --hero-overlay-alpha: 0.45;
-    --footer-bg: 140 30% 4%;
+    --footer-bg: 130 60% 2%;            /* #020b03 */
+    --footer-foreground: 122 60% 93%;
   }
 }
 
