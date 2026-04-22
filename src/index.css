@@ -233,10 +233,17 @@
     transition-duration: 240ms;
   }
   .btn-primary {
-    background: hsl(var(--accent-blue));
+    background: hsl(var(--accent-red));
     color: white;
   }
   .btn-primary:hover {
+    background: hsl(var(--accent-red-hover));
+  }
+  .btn-secondary {
+    background: hsl(var(--accent-blue));
+    color: white;
+  }
+  .btn-secondary:hover {
     background: hsl(var(--accent-blue-hover));
   }
   .btn-ghost {
