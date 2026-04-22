@@ -28,10 +28,17 @@ export default {
         "text-secondary": "hsl(var(--text-secondary))",
         "text-muted": "hsl(var(--text-muted))",
         "brand-teal": "hsl(var(--brand-teal))",
+        "brand-deep": "hsl(var(--brand-deep))",
         "brand-grey": "hsl(var(--brand-grey))",
+        "footer-bg": "hsl(var(--footer-bg))",
+        "footer-foreground": "hsl(var(--footer-foreground))",
         "accent-blue": {
           DEFAULT: "hsl(var(--accent-blue))",
           hover: "hsl(var(--accent-blue-hover))",
+        },
+        "accent-red": {
+          DEFAULT: "hsl(var(--accent-red))",
+          hover: "hsl(var(--accent-red-hover))",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
