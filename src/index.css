@@ -281,3 +281,32 @@
     transform: translateY(0);
   }
 }
+
+/* ===== Hero Cinematic Reveal ===== */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% { text-shadow: 0 0 20px hsl(var(--accent-blue) / 0); }
+  50%      { text-shadow: 0 0 40px hsl(var(--accent-blue) / 0.35); }
+}
+
+.hero-reveal {
+  opacity: 0;
+  animation: slideUpFade 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.hero-reveal-1 { animation-delay: 0.10s; }
+.hero-reveal-2 { animation-delay: 0.35s; }
+.hero-reveal-3 { animation-delay: 0.60s; }
+.hero-reveal-4 { animation-delay: 0.85s; }
+.hero-reveal-5 { animation-delay: 1.10s; }

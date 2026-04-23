@@ -44,7 +44,7 @@ export default function StatsBar() {
       <div className="container-wide flex flex-wrap items-stretch divide-y md:divide-y-0 md:divide-x md:divide-x-reverse divide-border-line">
         <Stat value={400} prefix="+" suffix=" مليار$" label="تكلفة إعادة إعمار سوريا المتوقعة" />
         <Stat value={15} prefix="+" label="دراسة جدوى منجزة" />
-        <Stat value={426} suffix="%" decimals={1} label="أعلى عائد ROI في دراساتنا" />
+        <Stat value={824} suffix="%" decimals={1} label="أعلى عائد ROI في دراساتنا" />
         <Stat value={5} prefix="+" label="قطاعات مدروسة ومُنفَّذة" />
       </div>
     </section>

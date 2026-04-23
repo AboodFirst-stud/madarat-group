@@ -41,7 +41,7 @@ export default function About() {
             <div className="mt-8 grid grid-cols-3 gap-3">
               {[
                 { n: "2,700", u: "هكتار", l: "أكبر مشروع مسح" },
-                { n: "42.6%", u: "ROI", l: "أعلى عائد محقق" },
+                { n: "82.4%", u: "ROI", l: "أعلى عائد محقق" },
                 { n: "+15", u: "دراسة", l: "جدوى منجزة" },
               ].map((s) => (
                 <div key={s.n} className="surface-card p-4 text-center">

@@ -52,10 +52,14 @@ export default function WhyMadarat() {
                 {/* النص */}
                 <div className={isReversed ? "md:order-last" : ""}>
                   <div
-                    className="text-6xl font-bold mb-4"
-                    style={{ color: "hsl(var(--accent-blue))" }}
+                    className="text-6xl font-bold mb-4 select-none"
+                    style={{
+                      color: "hsl(var(--accent-blue))",
+                      opacity: 0.3,
+                      letterSpacing: "-0.04em",
+                    }}
                   >
-                    {r.n}
+                    {parseInt(r.n)}
                   </div>
                   <h3 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
                     {r.t}
